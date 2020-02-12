@@ -1,15 +1,15 @@
-from flask import Flask, request, jsonify, make_response
+from flask import request, jsonify, make_response
 from MASS import Translator
+from src import app
 
 import os
 
-app = Flask(__name__)
 
 en2zh_translator = Translator()
 en2zh_translator.initialize()
 zh2en_translator = Translator()
 zh2en_translator.initialize(s_lang='zh', t_lang='en',
-                            bpe_codes=os.path.join(os.path.dirname(__file__), './MASS/model/bpe/all.zh.bpe.codes'))
+                            bpe_codes=os.path.join(os.path.dirname(__file__), '../MASS/model/bpe/all.zh.bpe.codes'))
 
 
 @app.route('/')
@@ -33,7 +33,3 @@ def translate_sentence():
                 't_text': t_text}
     response = make_response(jsonify(json_obj), 200)
     return response
-
-
-if __name__ == '__main__':
-    app.run()
