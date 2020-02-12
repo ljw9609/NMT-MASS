@@ -1,0 +1,6 @@
+fairseq==0.7.1
+jieba==0.42.1
+nltk==3.4.5
+subword-nmt==0.3.7
+torch==1.4.0
+flask==1.1.1
