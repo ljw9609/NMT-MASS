@@ -84,7 +84,7 @@ en2zh.translate('Slowly and not without struggle, America began to listen.')
 
 #### 1. Run on local
 
-```py
+```sh
 # download pre-trained model
 wget https://modelrelease.blob.core.windows.net/mass/zhen_mass_pre-training.pt -P ./MASS/model
 
