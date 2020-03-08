@@ -109,7 +109,7 @@ docker run -p 4869:8000 --name mass nmt-mass
 
 #### HTTP Request
 
-```json
+```
 POST /translate
 Host: YOUR_SERVER_ADDRESS
 Body: {
@@ -121,7 +121,7 @@ Body: {
 
 #### HTTP Response
 
-```json
+```
 {
   's_text': 'Slowly and not without struggle, America began to listen.',
   't_text': '美国缓慢地开始倾听，但并非没有艰难曲折。'
