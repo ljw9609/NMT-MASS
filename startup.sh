@@ -2,4 +2,6 @@ wget --no-check-certificate https://modelrelease.blob.core.windows.net/mass/zhen
 
 python -m nltk.downloader all
 
-gunicorn --config ./conf/gunicorn_config.py src:app
+nohup gunicorn --config ./conf/gunicorn_config.py src:app &
+
+/bin/bash
